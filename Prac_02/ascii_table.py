@@ -1,0 +1,6 @@
+character = str(input("Enter a character: "))
+code = ord(character)
+print("The ASCII code for {} is {}".format(character,code))
+number = int(input("Enter a number between 33 to 127: "))
+convert = chr(number)
+print("The character for {} is {}".format(number,convert))
