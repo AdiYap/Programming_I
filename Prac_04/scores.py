@@ -15,27 +15,19 @@ def main():
     """Read and display student scores from scores file."""
 
     scores_file = open("scores.csv")
-
     scores_data = scores_file.readlines()
-
     # print(scores_data)
-
     subjects = scores_data[0].strip().split(",")
 
     score_values = []
 
     for score_line in scores_data[1:]:
-
         score_strings = score_line.strip().split(",")
-
         score_numbers = [int(value) for value in score_strings]
-
         score_values.append(score_numbers)
-
     scores_file.close()
 
     scores_by_subject = reorganise_scores_by_subject(score_values)
-
     display_subject_details(scores_by_subject, subjects)
 
 
